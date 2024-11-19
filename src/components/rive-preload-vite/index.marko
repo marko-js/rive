@@ -1,0 +1,8 @@
+import * as rive from "@rive-app/canvas-lite";
+import riveWASMResource from "@rive-app/canvas-lite/rive.wasm?url";
+class {}
+$ {
+  if (typeof document === "object")
+    rive.RuntimeLoader.setWasmUrl(riveWASMResource);
+}
+<link rel="preload" href=riveWASMResource as="fetch" crossorigin="anonymous">

@@ -1,0 +1,36 @@
+import doc from "./doc.riv";
+import type { Rive } from "@rive-app/canvas-lite";
+class {
+  declare rive: Rive;
+  handleMounted(rive: Rive) {
+    this.rive = rive;
+    this.rive.play();
+  }
+
+  trigger(index: number) {
+    this.rive.stateMachineInputs("State Machine 1")[index].fire();
+  }
+}
+
+<rive-canvas src=doc stateMachines="State Machine 1" onMount("handleMounted")>
+  <@canvas width=500 height=500 class="doc"/>
+</rive-canvas>
+
+<div>
+  <button onClick("trigger", 0)>
+    Blink
+  </button>
+  <button onClick("trigger", 1)>
+    Look Around
+  </button>
+  <button onClick("trigger", 2)>
+    Adjust Glasses
+  </button>
+</div>
+style {
+  .doc {
+    border: 1px solid black;
+    width: 20rem;
+    height: 20rem;
+  }
+}
