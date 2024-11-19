@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "marko-rive-canvas": {
-      "signature": "e9efcebd8baac66797feee96cc2fc3f7",
-      "file": true
-    }
-  }
-}
