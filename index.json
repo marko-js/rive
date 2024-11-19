@@ -1,0 +1,1 @@
+{"v":4,"entries":{"from-file--default":{"type":"story","id":"from-file--default","name":"Default","title":"From File","importPath":"./src/components/rive-canvas/stories.ts","tags":["story"]},"with-preload--default":{"type":"story","id":"with-preload--default","name":"Default","title":"With Preload","importPath":"./src/components/rive-preload-vite/stories.ts","tags":["story"]}}}
