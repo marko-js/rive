@@ -1,0 +1,29 @@
+import { type RiveParameters } from "@rive-app/canvas-lite";
+import * as rive from "@rive-app/canvas-lite";
+export interface Input extends Omit<RiveParameters, "canvas" | "onLoad"> {
+  canvas?: Marko.AttrTag<Marko.HTML.Canvas>;
+  onMount?: (rive: rive.Rive) => void;
+  onLoad?: (rive: rive.Rive) => void;
+}
+
+<canvas key="canvas" ...input.canvas/>
+class {
+  declare rive: rive.Rive;
+  onMount() {
+    const { canvas, ...riveInput } = this.input;
+    this.rive = new rive.Rive({
+      ...riveInput,
+      canvas: this.getEl("canvas") as HTMLCanvasElement,
+      onLoad: () => {
+        this.rive.resizeDrawingSurfaceToCanvas();
+        this.emit("load", this.rive);
+      },
+    });
+
+    this.emit("mount", this.rive);
+  }
+
+  onDestroy() {
+    this.rive?.cleanup();
+  }
+}
