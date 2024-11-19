@@ -2,6 +2,7 @@
   "name": "rive-marko",
   "version": "0.0.1",
   "description": "Marko library project with TypeScript",
+  "homepage": "https://markojs.com/rive",
   "license": "MIT",
   "type": "module",
   "files": [
@@ -16,9 +17,12 @@
     "@ci:lint": "npm run lint",
     "@ci:test": "vitest run --coverage --no-color",
     "build": "mtc",
+    "build-storybook": "storybook build -o ./storybook-static",
     "clean": "rm -rf coverage dist node_modules/.{cache,vite,vitest}",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "format": "eslint --format unix --fix .; stylelint --formatter unix --fix '**/*.css'; prettier . --write --log-level=warn",
     "lint": "mtc && eslint --format unix . && stylelint --formatter unix '**/*.css' && prettier . --check --log-level=warn",
+    "predeploy": "npm run build-storybook",
     "prepare": "husky",
     "storybook": "storybook dev",
     "test": "vitest"
@@ -42,6 +46,7 @@
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-testing-library": "^6.2.0",
+    "gh-pages": "^6.2.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "marko": "^5.33.3",
