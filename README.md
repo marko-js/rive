@@ -18,7 +18,7 @@ import riveAsset from "./path/to/asset.riv";
 
 <rive-canvas/riveInstance src=riveAsset/>
 
-<script>riveInstance?.play();</script>
+<script>riveInstance().play();</script>
 ```
 
 ### Marko 5 (Class API)
