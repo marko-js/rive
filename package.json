@@ -1,6 +1,6 @@
 {
-  "name": "rive-marko",
-  "version": "0.0.1",
+  "name": "@marko-tags/rive",
+  "version": "0.0.0",
   "description": "Marko library project with TypeScript",
   "homepage": "https://markojs.com/rive",
   "license": "MIT",
@@ -18,15 +18,20 @@
     "@ci:test": "vitest run --coverage --no-color",
     "build": "mtc",
     "build-storybook": "storybook build -o ./storybook-static",
+    "change": "changeset add",
     "clean": "rm -rf coverage dist node_modules/.{cache,vite,vitest}",
     "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static",
     "format": "eslint --format unix --fix .; stylelint --formatter unix --fix '**/*.css'; prettier . --write --log-level=warn",
     "lint": "mtc && eslint --format unix . && stylelint --formatter unix '**/*.css' && prettier . --check --log-level=warn",
     "prepare": "husky",
+    "release": "npm run build && changeset publish",
     "storybook": "storybook dev",
-    "test": "vitest"
+    "test": "vitest",
+    "version": "changeset version && npm i --package-lock-only"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.10",
     "@marko/compiler": "^5.35.4",
     "@marko/testing-library": "^6.2.0",
     "@marko/type-check": "^1.1.7",
@@ -61,6 +66,6 @@
   },
   "peerDependencies": {
     "@rive-app/canvas-lite": "^2",
-    "marko": "4 - 5"
+    "marko": "^5"
   }
 }
