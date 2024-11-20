@@ -19,10 +19,9 @@
     "build": "mtc",
     "build-storybook": "storybook build -o ./storybook-static",
     "clean": "rm -rf coverage dist node_modules/.{cache,vite,vitest}",
-    "deploy-storybook": "gh-pages -d storybook-static",
+    "deploy-storybook": "npm run build-storybook && gh-pages -d storybook-static",
     "format": "eslint --format unix --fix .; stylelint --formatter unix --fix '**/*.css'; prettier . --write --log-level=warn",
     "lint": "mtc && eslint --format unix . && stylelint --formatter unix '**/*.css' && prettier . --check --log-level=warn",
-    "predeploy": "npm run build-storybook",
     "prepare": "husky",
     "storybook": "storybook dev",
     "test": "vitest"
