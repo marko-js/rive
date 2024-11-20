@@ -1,0 +1,1 @@
+import{F as o}from"./from-file-UCacLlDS.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./_commonjs-dynamic-modules-TDtrdbi3.js";const i={title:"From File",component:o},m={args:{}};export{m as Default,i as default};
