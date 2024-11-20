@@ -5,8 +5,8 @@ A wrapper around the `@rive/canvas-lite` package that provides a Marko component
 ## Installation
 
 ```bash
-npm install @marko/rive
-yarn add @marko/rive
+npm install @marko-tags/rive
+yarn add @marko-tags/rive
 ```
 
 ## Usage
