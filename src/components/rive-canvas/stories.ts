@@ -12,9 +12,9 @@ export default {
     docs: {
       description: {
         component: `
-Use this component to render [Rive](https://rive.app/) animations in your Marko application.
+Use this component to render [Rive](https://rive.app/) animations in a Marko application.
 
-By default, the asset is frozen in its initial state until you call \`.play()\` on the Rive object.
+By default, the asset is frozen in its initial state until \`.play()\` is called on the Rive object.
 `,
       },
     },
