@@ -10,7 +10,7 @@ export default {
     docs: {
       description: {
         component:
-          "In Vite projects, put this component in the `<head>` of your layout whenever you will be using a Rive asset to preload the runtime.",
+          "In Vite projects, this tag should be added to the  `<head>` of any document where Rive is used.",
       },
     },
   },
