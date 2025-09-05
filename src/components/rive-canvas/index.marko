@@ -1,5 +1,5 @@
-import { type RiveParameters } from "@rive-app/canvas-lite";
-import * as rive from "@rive-app/canvas-lite";
+import type { RiveParameters } from "@rive-app/canvas";
+import * as rive from "@rive-app/canvas";
 export interface Input extends Omit<RiveParameters, "canvas" | "onLoad"> {
   canvas?: Marko.AttrTag<Marko.HTML.Canvas>;
   onMount?: (rive: rive.Rive) => void;

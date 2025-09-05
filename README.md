@@ -25,7 +25,7 @@ import riveAsset from "./path/to/asset.riv";
 
 ```marko
 import riveAsset from "./path/to/asset.riv";
-import type { Rive } from "@rive-app/canvas-lite";
+import type { Rive } from "@rive-app/canvas";
 
 <rive-canvas src=riveAsset onMount("handleMounted")/>
 class {
